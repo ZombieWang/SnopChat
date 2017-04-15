@@ -8,4 +8,5 @@ target 'SnopChat' do
   # Pods for SnopChat
   pod 'Firebase'
   pod 'Firebase/Storage'
+  pod 'Firebase/Auth'
 end
