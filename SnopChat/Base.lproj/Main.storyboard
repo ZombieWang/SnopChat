@@ -26,7 +26,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kz-wG-TZr">
-                                <rect key="frame" x="155.5" y="601" width="63" height="58"/>
+                                <rect key="frame" x="156" y="601" width="63" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="BuV-MO-DNF"/>
                                     <constraint firstAttribute="width" constant="63" id="gLw-bd-qoD"/>
@@ -70,9 +70,148 @@
             </objects>
             <point key="canvasLocation" x="13.6" y="57.121439280359823"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Sgx-W8-Nuv">
+            <objects>
+                <viewController id="U76-aF-Hbl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CCD-Ap-eo6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Un4-xF-3Le"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O4m-m4-sbu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes" translatesAutoresizingMaskIntoConstraints="NO" id="ovX-MH-hPj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKB-It-ZhF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.27450980390000002" green="0.59215686270000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6eJ-Ns-lKT" customClass="RoundedTextField" customModule="SnopChat" customModuleProvider="target">
+                                <rect key="frame" x="55" y="311" width="265" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="83r-iY-fgf"/>
+                                    <constraint firstAttribute="height" constant="42" id="Dxa-uZ-oTF"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.76470588240000004" green="0.95294117649999999" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="th4-O6-FWw">
+                                <rect key="frame" x="55" y="130" width="265" height="64"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="devslopes-mountains-white" translatesAutoresizingMaskIntoConstraints="NO" id="lFn-Vt-uo2">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="64" id="aga-Lq-EyO"/>
+                                            <constraint firstAttribute="width" constant="100" id="xdx-Wp-akH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snopchat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fca-mM-P8n">
+                                        <rect key="frame" x="100" y="0.0" width="165" height="64"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="36"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="gqm-xU-HnD"/>
+                                    <constraint firstAttribute="height" constant="64" id="iw6-ol-79J"/>
+                                </constraints>
+                            </stackView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oOb-lt-qk1" customClass="RoundedTextField" customModule="SnopChat" customModuleProvider="target">
+                                <rect key="frame" x="55" y="249" width="265" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="XSI-Hj-LAb"/>
+                                    <constraint firstAttribute="width" constant="265" id="aPz-Ka-fQe"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.76470588235294112" green="0.95294117647058818" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uFM-Qz-Hub" customClass="RoundedButton" customModule="SnopChat" customModuleProvider="target">
+                                <rect key="frame" x="55" y="373" width="265" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="OA5-1A-4Cu"/>
+                                    <constraint firstAttribute="width" constant="265" id="w5t-Ya-DBt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Login In">
+                                    <color key="titleColor" red="0.27450980390000002" green="0.59215686270000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Un4-xF-3Le" firstAttribute="top" secondItem="aKB-It-ZhF" secondAttribute="bottom" id="0Ng-Ae-zhL"/>
+                            <constraint firstItem="aKB-It-ZhF" firstAttribute="top" secondItem="O4m-m4-sbu" secondAttribute="top" id="1ZZ-Dl-Ana"/>
+                            <constraint firstAttribute="trailing" secondItem="ovX-MH-hPj" secondAttribute="trailing" id="2Be-FL-WGc"/>
+                            <constraint firstItem="oOb-lt-qk1" firstAttribute="top" secondItem="th4-O6-FWw" secondAttribute="bottom" constant="55" id="Ges-wI-afF"/>
+                            <constraint firstItem="th4-O6-FWw" firstAttribute="centerX" secondItem="O4m-m4-sbu" secondAttribute="centerX" id="MwP-vb-POd"/>
+                            <constraint firstItem="uFM-Qz-Hub" firstAttribute="centerX" secondItem="O4m-m4-sbu" secondAttribute="centerX" id="OtT-4V-kpm"/>
+                            <constraint firstItem="aKB-It-ZhF" firstAttribute="leading" secondItem="O4m-m4-sbu" secondAttribute="leading" id="Unq-ei-7VP"/>
+                            <constraint firstItem="ovX-MH-hPj" firstAttribute="top" secondItem="O4m-m4-sbu" secondAttribute="top" id="V2Z-Jx-IWe"/>
+                            <constraint firstItem="6eJ-Ns-lKT" firstAttribute="top" secondItem="oOb-lt-qk1" secondAttribute="bottom" constant="20" id="cPw-7m-oED"/>
+                            <constraint firstItem="oOb-lt-qk1" firstAttribute="centerX" secondItem="O4m-m4-sbu" secondAttribute="centerX" id="dqn-PJ-dKX"/>
+                            <constraint firstAttribute="trailing" secondItem="aKB-It-ZhF" secondAttribute="trailing" id="nBV-Ln-Xsq"/>
+                            <constraint firstItem="th4-O6-FWw" firstAttribute="top" secondItem="CCD-Ap-eo6" secondAttribute="bottom" constant="110" id="nWF-b4-Eqf"/>
+                            <constraint firstItem="Un4-xF-3Le" firstAttribute="top" secondItem="ovX-MH-hPj" secondAttribute="bottom" id="pHs-Jv-HOd"/>
+                            <constraint firstItem="ovX-MH-hPj" firstAttribute="leading" secondItem="O4m-m4-sbu" secondAttribute="leading" id="qgy-zB-5f9"/>
+                            <constraint firstItem="uFM-Qz-Hub" firstAttribute="top" secondItem="6eJ-Ns-lKT" secondAttribute="bottom" constant="20" id="reh-lU-aea"/>
+                            <constraint firstItem="6eJ-Ns-lKT" firstAttribute="centerX" secondItem="O4m-m4-sbu" secondAttribute="centerX" id="tsi-d6-TtB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dof-I0-3n6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="57.121439280359823"/>
+        </scene>
     </scenes>
     <resources>
         <image name="camera_icon_snap" width="29" height="24"/>
         <image name="createsnap_btn" width="30" height="30"/>
+        <image name="devslopes" width="1080" height="1349"/>
+        <image name="devslopes-mountains-white" width="451" height="335"/>
     </resources>
 </document>
