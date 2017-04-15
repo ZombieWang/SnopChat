@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		019C85EE1EA1C053007A3B1C /* AAPLCameraVCDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AAPLCameraVCDelegate.h; sourceTree = "<group>"; };
 		01B2E56A1EA1116000C7C5F4 /* SnopChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnopChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B2E56D1EA1116000C7C5F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B2E56F1EA1116000C7C5F4 /* CameraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
@@ -42,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		019C85ED1EA1C026007A3B1C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				019C85EE1EA1C053007A3B1C /* AAPLCameraVCDelegate.h */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
 		01B2E5611EA1116000C7C5F4 = {
 			isa = PBXGroup;
 			children = (
@@ -61,10 +70,11 @@
 		01B2E56C1EA1116000C7C5F4 /* SnopChat */ = {
 			isa = PBXGroup;
 			children = (
-				01B2E5891EA11B3C00C7C5F4 /* Resource */,
 				01B2E5881EA11B3500C7C5F4 /* Model */,
 				01B2E5871EA11B2900C7C5F4 /* View */,
 				01B2E5861EA11B1F00C7C5F4 /* Controller */,
+				019C85ED1EA1C026007A3B1C /* Protocol */,
+				01B2E5891EA11B3C00C7C5F4 /* Resource */,
 				01B2E57F1EA11B0E00C7C5F4 /* SnopChat-Bridging-Header.h */,
 			);
 			path = SnopChat;
@@ -356,6 +366,7 @@
 				01B2E57E1EA1116000C7C5F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

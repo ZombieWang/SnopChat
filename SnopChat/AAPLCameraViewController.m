@@ -11,6 +11,7 @@
 
 #import "AAPLCameraViewController.h"
 #import "AAPLPreviewView.h"
+#import "AAPLCameraVCDelegate.h"
 
 static void * CapturingStillImageContext = &CapturingStillImageContext;
 static void * SessionRunningContext = &SessionRunningContext;
