@@ -64,16 +64,18 @@
                         <outlet property="cameraBtn" destination="kXm-YW-9Qk" id="7pQ-jR-IYR"/>
                         <outlet property="previewView" destination="8lJ-O5-15d" id="rrs-SL-7ae"/>
                         <outlet property="recordBtn" destination="1kz-wG-TZr" id="jlV-Ug-3uI"/>
+                        <segue destination="U76-aF-Hbl" kind="presentation" identifier="LoginVC" id="Dqe-mT-fWn"/>
+                        <segue destination="fVQ-m3-Ehc" kind="show" identifier="UsersVC" id="skc-hh-rS8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="13.6" y="57.121439280359823"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="Sgx-W8-Nuv">
             <objects>
-                <viewController id="U76-aF-Hbl" sceneMemberID="viewController">
+                <viewController id="U76-aF-Hbl" customClass="LoginVC" customModule="SnopChat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CCD-Ap-eo6"/>
                         <viewControllerLayoutGuide type="bottom" id="Un4-xF-3Le"/>
@@ -180,6 +182,9 @@
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="U76-aF-Hbl" eventType="touchUpInside" id="Cdm-Ow-R6e"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -202,10 +207,102 @@
                             <constraint firstItem="6eJ-Ns-lKT" firstAttribute="centerX" secondItem="O4m-m4-sbu" secondAttribute="centerX" id="tsi-d6-TtB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="oOb-lt-qk1" id="emx-zx-r9x"/>
+                        <outlet property="passwordField" destination="6eJ-Ns-lKT" id="pM6-Lm-Mhf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dof-I0-3n6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="908" y="57.121439280359823"/>
+        </scene>
+        <!--UsersVC-->
+        <scene sceneID="xos-5P-LK6">
+            <objects>
+                <viewController id="fVQ-m3-Ehc" customClass="UsersVC" customModule="SnopChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ydG-aW-caj"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZKb-xj-y4X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jaJ-FU-5xo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PMF-gW-z04">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserCell" id="wwJ-PY-1Jo" customClass="UserCell" customModule="SnopChat" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wwJ-PY-1Jo" id="Nuo-0M-Wgq">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JamesBond23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3R-dZ-BoO">
+                                                    <rect key="frame" x="20" y="5.5" width="230" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="FES-ej-jB9"/>
+                                                        <constraint firstAttribute="width" constant="230" id="PHR-Zk-w6l"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="p3R-dZ-BoO" firstAttribute="centerY" secondItem="Nuo-0M-Wgq" secondAttribute="centerY" id="0Aj-MI-rQ0"/>
+                                                <constraint firstItem="p3R-dZ-BoO" firstAttribute="leading" secondItem="Nuo-0M-Wgq" secondAttribute="leading" constant="20" id="5d3-Bq-Hwd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="firstNameLbl" destination="p3R-dZ-BoO" id="0YR-4y-gjo"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Nzm-dn-FhO">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <color key="barTintColor" red="0.27450980390000002" green="0.59215686270000001" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xhW-kL-Y8c">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7pP-tK-eiA"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Send a Pull Request" id="Tvt-1V-15r">
+                                        <barButtonItem key="rightBarButtonItem" image="send_snap" id="GKj-8x-LhS">
+                                            <connections>
+                                                <action selector="sendPRBtnPressedWithSender:" destination="fVQ-m3-Ehc" id="Dv7-pb-Ukc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xhW-kL-Y8c" firstAttribute="top" secondItem="jaJ-FU-5xo" secondAttribute="top" constant="20" id="3FI-VG-MOi"/>
+                            <constraint firstItem="xhW-kL-Y8c" firstAttribute="leading" secondItem="jaJ-FU-5xo" secondAttribute="leading" id="5CG-Rp-tZp"/>
+                            <constraint firstItem="ZKb-xj-y4X" firstAttribute="top" secondItem="PMF-gW-z04" secondAttribute="bottom" id="8cT-aE-WKa"/>
+                            <constraint firstAttribute="trailing" secondItem="Nzm-dn-FhO" secondAttribute="trailing" id="BGS-fU-nVP"/>
+                            <constraint firstAttribute="trailing" secondItem="PMF-gW-z04" secondAttribute="trailing" id="CAu-Mn-lD0"/>
+                            <constraint firstItem="Nzm-dn-FhO" firstAttribute="leading" secondItem="jaJ-FU-5xo" secondAttribute="leading" id="fbE-V7-9wP"/>
+                            <constraint firstItem="PMF-gW-z04" firstAttribute="leading" secondItem="jaJ-FU-5xo" secondAttribute="leading" id="hYL-fZ-7pn"/>
+                            <constraint firstAttribute="trailing" secondItem="xhW-kL-Y8c" secondAttribute="trailing" id="mEg-s3-EO9"/>
+                            <constraint firstItem="PMF-gW-z04" firstAttribute="top" secondItem="Nzm-dn-FhO" secondAttribute="bottom" id="nVK-ww-CcD"/>
+                            <constraint firstItem="Nzm-dn-FhO" firstAttribute="top" secondItem="xhW-kL-Y8c" secondAttribute="bottom" id="uvv-TR-LlH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="PMF-gW-z04" id="PTX-NI-hn5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9J-Ik-E5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.6" y="-769.56521739130437"/>
         </scene>
     </scenes>
     <resources>
@@ -213,5 +310,6 @@
         <image name="createsnap_btn" width="30" height="30"/>
         <image name="devslopes" width="1080" height="1349"/>
         <image name="devslopes-mountains-white" width="451" height="335"/>
+        <image name="send_snap" width="24" height="23"/>
     </resources>
 </document>
